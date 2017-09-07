@@ -52,7 +52,7 @@ Value,Mnemonic,Gas Used,Subset,Removed from stack,Added to stack,Notes,Formula,F
 0x57,JUMPI,10,high,2,0,Conditionally alter the program counter.,,
 0x58,PC,2,base,0,1,Get the value of the program counter prior to the increment corresponding to this instruction.,,
 0x59,MSIZE,2,base,0,1,Get the size of active memory in bytes.,,
-0x5a,GAS,2,base,0,1,"Get the amount of available gas, including the\ncorresponding reduction for the cost of this instruction.",,
+0x5a,GAS,2,base,0,1,"Get the amount of available gas, including thecorresponding reduction for the cost of this instruction.",,
 0x5b,JUMPDEST,1,,0,0,Mark a valid destination for jumps,,
 cr,PUSH*,3,verylow,0,1,Place * byte item on stack. 0 < * <= 32,,
 0x80 -- 0x8f,DUP*,3,verylow,*,* + 1,Duplicate *th stack item. 0 < * <= 16,,
