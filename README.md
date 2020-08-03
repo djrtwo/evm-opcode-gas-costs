@@ -1,6 +1,6 @@
 # EVM OPCODE Gas Costs
 
-This repo organizes info about and tracks changes to OPCODE gas costs in the [Ethereum Yellow Paper](http://yellowpaper.io/).
+This repo organizes info about and tracks changes to OPCODE gas costs in the [Ethereum Yellow Paper](https://github.com/ethereum/yellowpaper).
 
 Click on a CSV in the browser and github does a pretty good job displaying it, or pull down the repo to use locally.
 
@@ -18,4 +18,4 @@ Any and all help is welcome. Please submit a pull request with any corrections o
 
 ## Disclaimer
 
-This repo aspires to have correct and up to date info on gas costs of EVM OPCODEs, but if ever in doubt, the [yellow paper](http://yellowpaper.io/) is the ultimate truth and source of info. *Use at your own risk*.
+This repo aspires to have correct and up to date info on gas costs of EVM OPCODEs, but if ever in doubt, the [yellow paper](https://github.com/ethereum/yellowpaper) is the ultimate truth and source of info. *Use at your own risk*.
