@@ -63,9 +63,9 @@ Value,Mnemonic,Gas Used,Subset,Removed from stack,Added to stack,Notes,Formula N
 0xa3,LOG3,375 + 8 * (number of bytes in log data) + 3 * 375,,5,0,Append log record with three topics.,375 is paid for operation plus 8 for each byte in data to be logged plus 3 * 375 for the 3 topics to be logged.
 0xa4,LOG4,375 + 8 * (number of bytes in log data) + 4 * 375,,6,0,Append log record with four topics.,375 is paid for operation plus 8 for each byte in data to be logged plus 4 * 375 for the 4 topics to be logged.
 0xf0,CREATE,32000,,3,1,Create a new account with associated code.,
-0xf1,CALL,Complex -- see yellow paper  Appendix H,,7,1,Message-call into an account.,
-0xf2,CALLCODE,Complex -- see yellow paper  Appendix H,,7,1,Message-call into this account with an alternative account’s code.,
+0xf1,CALL,700 + (2300 if callvalue nonzero) + (25000 if creates new account) + min(gas limit of call, gas used by call),,7,1,Message-call into an account.,700 is paid for the operation plus the gas used by the call plus "extra" costs incurred for special cases. There is no charge on memory written to the return buffer because the callee has already paid that.
+0xf2,CALLCODE,Same as CALL,,7,1,Message-call into this account with an alternative account’s code.,
 0xf3,RETURN,0,zero,2,0,Halt execution returning output data.,
-0xf4,DELEGATECALL,Complex -- see yellow paper  Appendix H,,6,1,"Message-call into this account with an alternative account’s code, but persisting the current values for sender and value.",
+0xf4,DELEGATECALL,Same as CALL,,6,1,"Message-call into this account with an alternative account’s code, but persisting the current values for sender and value.",
 0xfe,INVALID,NA,,NA,NA,Designated invalid instruction.,
 0xff,SELFDESTRUCT,5000 + ((create_new_account) ? 25000 : 0),,1,0,Halt execution and register account for later deletion,5000 for the operation plus 25000 if a new account is also created. A refund of 24000 gas is also added to the refund counter for self-destructing the account.
