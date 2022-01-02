@@ -6,6 +6,8 @@ Click on a CSV in the browser and github does a pretty good job displaying it, o
 
 This project started at EIP 150 and will build out new CSVs as new versions of the protocol are released (e.g. Metropolis!). I also plan on going back and building out previous versions, especially if there is some demand and/or help in doing so.
 
+The size of a "word" in EVM is 256 bits.
+
 ## Google Spreadsheets
 
 For those of you that prefer a google spreadsheet, I will be maintaining a corresponding google spreadsheet per EIP update
